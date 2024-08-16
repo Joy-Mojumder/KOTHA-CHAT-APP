@@ -67,3 +67,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* cool looking scrollbar */
+
+@layer components {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted));
+    border-radius: var(--radius);
+    -webkit-border-radius: var(--radius);
+    -moz-border-radius: var(--radius);
+    -ms-border-radius: var(--radius);
+    -o-border-radius: var(--radius);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: hsl(var(--background));
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    box-shadow: hsl((var(--muted)));
+    border: 2px solid #83e584;
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    background: #439643;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+}
